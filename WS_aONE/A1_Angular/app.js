@@ -10,15 +10,15 @@ app.config(function ($routeProvider) {
     // })
 
     .when("/", {
-      template: '<strong>default page</strong><br/><p>default content here</p>'
-      // templateUrl: "views/main.html",
-      // controller: "mainCtrl"
+      // template: '<strong>default page</strong><br/><p>default content here</p>'
+      templateUrl: "views/main.html",
+      controller: "mainCtrl"
     })
 
     .when("/users", {
-      template: '<strong>users page</strong><br/><p>User content here</p>'
-      // templateUrl: "users.html",
-      // controller: "usersCtrl"
+      // template: '<strong>users page</strong><br/><p>User content here</p>'
+      templateUrl: "views/users.html",
+      controller: "usersCtrl"
     })
 
     .otherwise({
