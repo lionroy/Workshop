@@ -1,0 +1,41 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Anton'); /* headliner */
+@import url('https://fonts.googleapis.com/css?family=Bigelow+Rules');
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round'); /* heb font */
+
+
+
+/* css */
+* {
+    border-radius: 0;
+ }
+
+body {
+    font-family: Lato, Roboto, sans-serif;
+}
+.navbar-header {
+/* font-family: inherit;     */
+font-family: 'Glyphicons Halflings';
+
+}
+.navbar-brand {
+/* def */
+    font-family: 'Roboto Slab', serif;
+/* more rules */
+    font-family: 'Bigelow Rules', cursive;
+font-size: 2.5em;    
+}
+.caret {
+    font-family: 'Glyphicons Halflings';    
+}
+
+/*
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Mono', monospace;
+
