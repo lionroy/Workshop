@@ -1,6 +1,7 @@
 
 app.controller("testCtrl", function($scope) {
     $scope.test = "Bad romance error #1";
+    console.log(test);
   });
 
 

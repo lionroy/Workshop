@@ -29,17 +29,25 @@ app.config(function ($routeProvider) {
 
 });
 
+//   testing ctrls
+//   app.controller("testCtrl", ["testCtrl", function(User, users) {
+//   var users = [];
+//   var user = new User("test", "test@test.co", "ftest", "ltest");
 
-//     .when("#!/views/tasks.html", {
-//       templateUrl: "views/main.html",
-//       controller: "mainCtrl"
-//     })
-//     .when("#!/users", {
-//       templateUrl: "views/users.html"
-//     })
-//     .otherwise({
-//        redirectTo: "#!/",
-//        controller: "homeCtrl"
-//     })
 
-//     // $locationProvider.hashPrefix('');
+//     // "username" = "username",
+//     //   "email" = "email@go.co",
+//     //   "fname" = "fname",
+//     //   "lname" = "lname",
+
+// //       "selected" = false,
+// //      "id" = 222333777,
+// //       "passport" = 888,
+// //       "role" = ["Manager", "Administrator"],
+// //       "hasRole" = true,
+// //       "isActive" = false,
+
+//     users.push(user);
+//       alert(user);
+//   }]);
+//   console.log(user);
