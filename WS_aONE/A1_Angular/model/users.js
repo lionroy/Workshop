@@ -1,19 +1,23 @@
 
-app.factory("users", function (user) {
+app.factory("users", function (User) {
     var users = [];
 
     function grabAll() {
         return cars;
     }
+
     function grabUserById(index) {
         return cars[index];
     }
+
     function addUser(user) {
         cars.push(user);
     }
+
     // function remUser(user){
     //     cars.pop(user); 
     // }
+    
     function setUsers(userCommon) {
         users = [];
         for (var i = 0; i < userCommon.length; i++) {
