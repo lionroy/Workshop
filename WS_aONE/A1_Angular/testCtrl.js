@@ -2,7 +2,7 @@
 app.controller("testCtrl", function($scope, $log) {
     $scope.test = "Bad romance error #1";
     console.log(test);
-    $log.$log.push($scope.test);
+    // $log.$log.push($scope.test);
   });
 
 

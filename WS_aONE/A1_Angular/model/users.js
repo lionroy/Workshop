@@ -1,21 +1,23 @@
-
+    // this controller has to deal with user management.. primarily using user.js and usersService.js 
+    console.log("starting users factory ctrl...");
+    
 app.factory("users", function (User) {
     var users = [];
 
     function grabAll() {
-        return cars;
+        return users;
     }
 
     function grabUserById(index) {
-        return cars[index];
+        return users[index];
     }
 
     function addUser(user) {
-        cars.push(user);
+        users.push(user);
     }
 
     // function remUser(user){
-    //     cars.pop(user); 
+    //     users.pop(user); 
     // }
     
     function setUsers(userCommon) {

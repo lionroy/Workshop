@@ -1,6 +1,10 @@
+    // this controller is the ctor or a single user management.. 
+    // primarily to be used by userCtrl.js and usersService.js 
+    console.log("starting user ctor...");
 
-app.factory("User", function () {
+app.factory("User", function (user){
 
+    console.log(user);
     // user ctor
     function User(username, email, fname, lname) {
         this.username = username;
@@ -24,7 +28,9 @@ app.factory("User", function () {
         // this.isActive = false;
         // this.activityMeters; // etc.
     };
-    return User;
+    
+    console.log("finished user ctor...");
+    
 })
 
 // field-set 
