@@ -22,7 +22,7 @@ app.config(function ($routeProvider) {
     })
 
     .otherwise({
-      template: '<strong>default routing page</strong><br/><p>No content here</p>'
+      template: '<strong>default 404 routing page</strong><br/><p>No content here</p>'
 
       // redirectTo: "/"
     })
