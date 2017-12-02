@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="practico">
+<html lang="en">
 
-<head>
+<head ng-app="practico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -28,14 +28,13 @@
     <script src="homeCtrl.js"></script>
 
     <!-- directed controllers-->
-    <!-- <script src="./controllers/mainCtrl.js"></script> -->
+    <script src="./controllers/mainCtrl.js"></script>
 
     <!-- <script src="./services/usersService.js"></script> -->
     <script src="./controllers/usersCtrl.js"></script>
     <!-- <script src="./controllers/addUserCtrl.js"></script> -->
-    <!-- <script src="./model/user.js"></script> -->
-    <script src="./model/users.js"></script>
-    <script src="./model/user.js"></script>
+    <!-- <script src="./model/user.js"></script>
+    <script src="./model/users.js"></script> -->
     <!-- 
     <script src="./controllers/tasksCtrl.js"></script>
     <script src="./controllers/addTaskCtrl.js"></script> -->
@@ -44,8 +43,7 @@
 </head>
 
 <body>
-    home: {{ 9 + 9 }}
-    
+
     <!-- tests only -->
     <!--     
         <button ng-model="count" ng-click="" ng-init="count=0">
@@ -57,10 +55,10 @@
         <ng-view></ng-view>
         {{ test }}
     -->
-    <!-- testing the controllers -->
-    <span ng-controller="testCtrl as demo">
+<!-- testing the controllers
+    <span ng-controller="TestController as demo">
         Client ID: {{demo.clientId}}
-    </span>
+    </span> -->
 
 
 
@@ -153,10 +151,10 @@
     </div> 
     -->
 <!-- testing the controllers -->
-<!-- <span ng-controller="testCtrl as demo">
+<span ng-controller="TestController as demo">
     Client ID: {{demo.clientId}}
-</span> 
-status: passed -->
+</span>
+
     <!--
             <div class="container container-fluid">
                 <h4>Content by Route</h4>
@@ -172,7 +170,7 @@ status: passed -->
 
     <div class="alert alert-info text-center">
         Footer name:
-         name: {{name}} yay: {{yay}} test: {{6+68}}
+        <!-- {{name}} yay: {{yay}} test: {{6+68}} -->
     </div>
 
 </body>

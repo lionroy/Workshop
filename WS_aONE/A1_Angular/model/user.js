@@ -1,17 +1,18 @@
     // this controller is the ctor or a single user management.. 
     // primarily to be used by userCtrl.js and usersService.js 
+//    console.log("starting user ctor...");
+
+app.factory("User", function (){
     console.log("starting user ctor...");
-
-app.factory("User", function (user){
-
-    console.log(user);
-    // user ctor
+    
+    //  console.log(user);
+    //  user ctor
     function User(username, email, fname, lname) {
         this.username = username;
         this.email = email;
         this.fname = fname;
         this.lname = lname;
-        this.selected = "false";
+        // this.selected = "false";
         // this.myName = this.fname + ' ' + this.lname;
         // this.onBoardTicket = function () {
         //     var onBoardingTime = new Date();
@@ -27,11 +28,14 @@ app.factory("User", function (user){
         // this.yearOfBirth = 2000; // TODO date+age ctrl
         // this.isActive = false;
         // this.activityMeters; // etc.
-    };
+        
+        console.log("finished user ctor...");
+        return {
+            User
+        }
+    }
     
-    console.log("finished user ctor...");
-    
-})
+});
 
 // field-set 
 // username = username;
