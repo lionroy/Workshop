@@ -23,12 +23,13 @@
     </div>
 
     <div class="well">
-        Search: <input type="text" ng-model="query" /> 
-        Order By: <select ng-model="orderProp">
-                  <option value="username">Username</option>
-                  <option value="email">email</option>
-                  <option value="fname">Name</option>
-                  <option value="lname">Surname</option>
+        Search:
+        <input type="text" ng-model="query" /> Order By:
+        <select ng-model="orderProp">
+            <option value="username">Username</option>
+            <option value="email">email</option>
+            <option value="fname">Name</option>
+            <option value="lname">Surname</option>
         </select>
     </div>
 
@@ -50,7 +51,10 @@
             <td>{{us.fname}}</td>
             <td>{{us.lname}}</td>
             <td>
-                <button type="button" class="btn btn-default" ng-click="remUserById(us.$index)">Remove</button>
+                <!-- TODO fix this | add Id prop to ctor
+                    <a href="javascript:void(0)" ng-click="edit(client.id)">edit</a> |
+                    <a href="javascript:void(0)" ng-click="delete(client.id)">delete</a>
+                -->
             </td>
         </tr>
     </table>

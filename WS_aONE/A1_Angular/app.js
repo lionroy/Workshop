@@ -38,6 +38,12 @@ app.config(function ($routeProvider) {
       templateUrl: "views/profile.html",
       controller: "profileCtrl"
     })
+    .when("/account", {
+      // account redirects to client management Ctrl..
+      // template: '<strong>users page</strong><br/><p>User content here</p>'
+      templateUrl: "admin/pages/clients.html",
+      controller: "clientCtrl"
+    })
 
     .otherwise({
       template: '<strong>default 404 routing page</strong><br/><p>No content here</p>'
