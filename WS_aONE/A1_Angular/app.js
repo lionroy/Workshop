@@ -10,23 +10,33 @@ app.config(function ($routeProvider) {
     // })
 
     // testing route
-    .when("/", {
-      // template: '<strong>default page</strong><br/><p>default content here</p>'
-      templateUrl: "views/test.html",
-      controller: "testCtrl"
-    })
-
-    // main route
     // .when("/", {
     //   // template: '<strong>default page</strong><br/><p>default content here</p>'
-    //   templateUrl: "views/main.html",
-    //   controller: "mainCtrl"
+    //   templateUrl: "views/test.html",
+    //   controller: "testCtrl"
     // })
+
+    // main route
+    .when("/", {
+      // template: '<strong>default page</strong><br/><p>default content here</p>'
+      templateUrl: "views/main.html",
+      controller: "mainCtrl"
+    })
 
     .when("/users", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'
       templateUrl: "views/users.html",
       controller: "usersCtrl"
+    })
+    .when("/tasks", {
+      // template: '<strong>users page</strong><br/><p>User content here</p>'
+      templateUrl: "views/tasks.html",
+      controller: "tasksCtrl"
+    })
+    .when("/profile", {
+      // template: '<strong>users page</strong><br/><p>User content here</p>'
+      templateUrl: "views/profile.html",
+      controller: "profileCtrl"
     })
 
     .otherwise({

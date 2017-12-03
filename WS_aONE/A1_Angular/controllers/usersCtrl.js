@@ -1,22 +1,58 @@
 
-app.controller('usersCtrl', ['$scope', '$rootScope', '$log', '$http', 'users', function userCtrl($scope, $rootScope, $log, $http, users) {
+app.controller('usersCtrl', ['$scope', '$rootScope', '$log', '$http', 'users',
+    function userCtrl($scope, $rootScope, $log, $http, users) {
 
-
-    if (users.wasLoaded()) {
-        $scope.users = users.grabAll();
-    } 
-    else {
-        $scope.users = [];
-        $http.get("/Data/userbase.json").then(function mySuccess(response) {
-            users.setUsers(response.data);
+        // initialize browser db of users ( for admin / mgr )
+        if (users.wasLoaded()) {
             $scope.users = users.grabAll();
-            //alert("success" + JSON.stringify(response.status));
-        }, function myError(response) {
-            alert("error db" + JSON.stringify(response.status));
-        })
-    }
+        }
+        else {
+            $scope.users = [];
+            $http.get("/Data/userbase.json").then(function mySuccess(response) {
+                users.setUsers(response.data);
+                $scope.users = users.grabAll();
+                //alert("success" + JSON.stringify(response.status));
+            }, function myError(response) {
+                alert("error db: " + JSON.stringify(response.status));
+            })
+        }
 
-}]);
+
+        // page functions
+        $scope.addUser = function() {
+                  //  users.addUser(new User("Susita", "Car@m.el", "Camel", "Food"));
+                    $scope.users = users.grabAll();
+                }
+
+        $scope.sortBy = function (prop) {
+            $scope.orderProp = prop;
+        }
+
+        // Custom filter function
+        $scope.filterNameAndSurname = function (user) {
+            if ($scope.query == undefined || $scope.query === "") {
+                return true;
+            }
+
+            var queryLowerCase = $scope.query.toLowerCase();
+            var username = user.username.toLowerCase();
+            var fname = user.fname.toLowerCase();
+            var lname = user.lname.toLowerCase();
+
+            if (fname.includes(queryLowerCase) ||
+                lname.includes(queryLowerCase) ||
+                username.includes(queryLowerCase)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $scope.selectUser = function (user) {
+            user.selected = !user.selected;
+        }
+    }]);
+    // anything below this is useless :)
 
 //$rootSscope.users = usersService().users.grabAll();
 

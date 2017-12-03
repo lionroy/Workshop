@@ -15,9 +15,13 @@
 // mainCtrl main code here..
 
 app.controller("mainCtrl", function ($scope) {
-  console.log("starting main ctrl ...");
-  
-  $scope.test = "MAIN : Hello I LOVE You";
-  console.log($scope.test);
+  // tests here
+  // console.log("starting main ctrl ...");
+  // $scope.test = "MAIN : Hello I LOVE You";
+  // console.log($scope.test);
 
+  // controller here
+
+
+  
 });
