@@ -1,4 +1,4 @@
 
-app.controller("homeCtrl1", function($scope, $location) {
+app.controller("homeCtrlTest", function($scope, $location) {
     $scope.test = "Hello Dolly" + $location.toString();
   });

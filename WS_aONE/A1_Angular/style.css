@@ -15,7 +15,9 @@
     border-radius: 0;
     box-sizing: border-box;
  }
-
+a {
+    cursor: pointer;
+}
 body {
     font-family: Lato, Roboto, sans-serif;
 }
