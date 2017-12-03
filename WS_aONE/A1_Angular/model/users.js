@@ -11,10 +11,11 @@
 // });
 
 
-
-app.factory("users", function (user) {
+app.factory("users", function (User) {
     console.log("starting users factory ctrl...");
+    
     var users = [];
+    var wasEverloaded = false;
 
     function grabAll() {
         return users;
@@ -37,19 +38,25 @@ app.factory("users", function (user) {
         for (var i = 0; i < userCommon.length; i++) {
 
             users.push(new User(userCommon[i].username, userCommon[i].email,
-                userCommon[i].fname, userCommon[i].lname,
-                userCommon[i].selected, userCommon[i].passport,
-                userCommon[i].role, userCommon[i].hasRole,
-                userCommon[i].isActive))
+                userCommon[i].fname, userCommon[i].lname));
+                //, userCommon[i].selected, userCommon[i].passport,
+                // userCommon[i].role, userCommon[i].hasRole,
+                // userCommon[i].isActive))
         }
+        wasEverloaded = true;
+    }
+
+    function wasLoaded() {
+        return wasEverloaded;
     }
     // users manager functionallity
     return {
         grabAll: grabAll,
         grabUserById: grabUserById,
         addUser: addUser,
-        remUser: remUser,
-        setUsers: setUsers
+        //remUser: remUser,
+        setUsers: setUsers,
+        wasLoaded: wasLoaded
     }
 });
 

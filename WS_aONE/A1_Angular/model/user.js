@@ -29,12 +29,10 @@ app.factory("User", function (){
         // this.isActive = false;
         // this.activityMeters; // etc.
         
-        console.log("finished user ctor...");
-        return {
-            User
-        }
+        // console.log("finished user ctor...");
     }
-    
+
+    return User;
 });
 
 // field-set 

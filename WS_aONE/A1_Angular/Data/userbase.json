@@ -1,17 +1,4 @@
 [
-// basic ctor of "User"
-// {
-//     "username": "username",
-//     "email": "email",
-//     "fname": "fname",
-//     "lname": "lname",
-//     "selected": "false",
-//     "id": 123456789,
-//     "passport": 888,
-//     "role": ["Manager", "Administrator"],
-//     "hasRole": "true",
-//     "isActive": "false"
-// },
 {
     "username": "Donald",
     "email": "donaldduck@acme.co",
