@@ -21,9 +21,6 @@ recipeApp.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $l
                 $scope.failedAttempt = true;
             }
     
-    
-    
-    
             //console.log($scope.email + " " + $scope.password)
         }
     
