@@ -17,12 +17,17 @@ app.config(function ($routeProvider) {
     // })
 
     // main route
+
     .when("/", {
+      // template: '<strong>default page</strong><br/><p>default content here</p>'
+      templateUrl: "views/home.html",
+      controller: "homeCtrl"
+    })
+    .when("/main", {
       // template: '<strong>default page</strong><br/><p>default content here</p>'
       templateUrl: "views/main.html",
       controller: "mainCtrl"
     })
-
     .when("/users", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'
       templateUrl: "views/users.html",
@@ -85,7 +90,7 @@ app.value('clientId', 'a12345654321x');
 // 
 
 app.service("testService", function () {
-  
+
   // checking the scope ...
   $scope.users = []; // scope is not defined... yet
   alert("starting user test service..." + $scope.users);

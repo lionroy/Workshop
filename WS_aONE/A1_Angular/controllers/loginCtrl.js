@@ -16,7 +16,7 @@ recipeApp.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $l
             if (user != null) {
                 activeUser.login(user);
                 $uibModalInstance.close("Logged-in");
-                $location.path("/recipes")
+                $location.path("/profile")
             } else {
                 $scope.failedAttempt = true;
             }
