@@ -16,9 +16,7 @@ app.controller("profileCtrl", ['$scope', '$rootScope', '$log', '$http',
       "selected": "false",
       "myUrl": "'baseUrl/#!/profiles/' + this.fname + '&=' + this.lname",
       "pUrl": "myFname+&=myLname", // printMyUrl();    
-      // this.uId     = grabMyuId();     
-      // this.guid    = grabMyGuid();     
-      // this.pId     = printMypId(); 
+      
       // this.auth    = printAuth();    
 
       // profile anchors

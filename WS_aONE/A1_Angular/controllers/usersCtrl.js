@@ -17,6 +17,19 @@ app.controller('usersCtrl', ['$scope', '$rootScope', '$log', '$http', 'users',
             })
         }
 
+        $scope.delete = function(user) {
+            var index = users.grabAll().indexOf(user);
+            users.remUserById(index);
+            $scope.users = users.grabAll();
+        }
+
+        // $scope.edit = function(user) {
+        //     var index = users.grabAll().indexOf(user);
+        //     users.grabUserById(index);
+        //     ...
+        //     $scope.users = users.grabAll();
+        // }
+
 
         // page functions
         $scope.addUser = function() {

@@ -43,7 +43,7 @@
             <th ng-click="sortBy('lname')">Surname</th>
             <th>Controls</th>
         </thead>
-        <tr ng-repeat="us in users  | filter : filterNameAndSurname | orderBy: orderProp : true" ng-click="selectUser(user)" ng-class="{'red-selected': car.selected}">
+        <tr ng-repeat="us in users | filter : filterNameAndSurname | orderBy: orderProp : true" ng-click="selectUser(user)" ng-class="{'red-selected': car.selected}">
 
             <td>{{$index}}</td>
             <td>{{us.username}}</td>
@@ -51,10 +51,10 @@
             <td>{{us.fname}}</td>
             <td>{{us.lname}}</td>
             <td>
-                <!-- TODO fix this | add Id prop to ctor
-                    <a href="javascript:void(0)" ng-click="edit(client.id)">edit</a> |
-                    <a href="javascript:void(0)" ng-click="delete(client.id)">delete</a>
-                -->
+                <!-- TODO fix this | add Id prop to ctor -->
+                    <a href="javascript:void(0)" ng-click="edit(us)">edit</a> |
+                    <a href="javascript:void(0)" ng-click="delete(us)">delete</a>
+                
             </td>
         </tr>
     </table>
