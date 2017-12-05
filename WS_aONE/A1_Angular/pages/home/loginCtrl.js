@@ -1,4 +1,4 @@
-recipeApp.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
+app.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
     
         $http.get("app/data/users.json").then(function (response) {
             $scope.users = [];

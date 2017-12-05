@@ -8,10 +8,12 @@
 // });
 
 app.controller("homeCtrl", function($scope, $uibModal) {
+  
   $scope.login = function () {
     $uibModal.open({
-      templateUrl: "app/login/login.html",
+      templateUrl: "/views/login.html",
       controller: "LoginCtrl"
     })
   }
 });
+

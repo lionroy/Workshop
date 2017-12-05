@@ -20,35 +20,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
-    
+
     <!-- App files -->
     <script src="app.js"></script>
 
     <!-- home controllers -->
     <script src="testCtrl.js"></script>
-    <script src="homeCtrl.js"></script>
-    
+    <script src="./pages/home/homeCtrl.js"></script>
+
     <!-- directed controllers -->
     <!-- admin controllers -->
+    <script src="./admin/users/usersCtrl.js"></script>
+    <script src="./admin/users/user.js"></script>
+    <script src="./admin/users/users.js"></script>
     <script src="./admin/pages/clientservice.js"></script>
     <script src="./admin/pages/clientCtrl.js"></script>
-    
-    <script src="./controllers/mainCtrl.js"></script>
-    <script src="./controllers/navCtrl.js"></script>
-    <script src="./controllers/usersCtrl.js"></script>
-    <script src="./controllers/profileCtrl.js"></script>
-    <script src="./controllers/tasksCtrl.js"></script>
-    <script src="./services/activeUser.js"></script>
 
     <!-- model code -->
-    <script src="./model/user.js"></script>
-    <script src="./model/users.js"></script>
+    <!-- controllers reg -->
+    <script src="./pages/home/navCtrl.js"></script>
+    <script src="./pages/home/loginCtrl.js"></script>
+    <script src="./pages/main/mainCtrl.js"></script>
+    <script src="./pages/profile/profileCtrl.js"></script>
+    <script src="./pages/profile/profile.js"></script>
+    <script src="./pages/tasks/tasksCtrl.js"></script>
+    <script src="./pages/tasks/task.js"></script>
+    <script src="./pages/tasks/tasks.js"></script>
+    <script src="./pages/cards/cardsGenCtrl.js"></script>
+    <script src="./pages/cards/myCard.js"></script>
 
-    <script src="./model/task.js"></script>
-    <script src="./model/tasks.js"></script>
+    <!-- services -->
+    <script src="./services/activeUser.js"></script>
 
-    <script src="./model/profile.js"></script>
-    <script src="./model/friends.js"></script>
+
+    <!-- <script src="./model/friends.js"></script> -->
 
 
     <!-- <script src="./services/usersService.js"></script> -->
@@ -103,7 +108,7 @@
                     <a href="#!/tasks">Tasks</a>
                 </li>
                 <li>
-                    <a href="#!/">Content</a>
+                    <a href="#!/myCards">New Card</a>
                 </li>
                 <li>
                     <a href="#!/">Gallery</a>
@@ -123,9 +128,13 @@
                 <!-- <li>
                     <a href="#!/profile">My Profile</a>
                 </li> -->
-                    <li><a href="#" ng-click="login()">Login</a></li>
-                    <li><a href="#" ng-click="logout()">Logout</a></li>
-                
+                <li>
+                    <a href="#!/login" ng-click="login()">Login</a>
+                </li>
+                <li>
+                    <a href="#!/home" ng-click="logout()">Logout</a>
+                </li>
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <span class="caret glyphicon glyphicon-caret"></span>
@@ -135,10 +144,10 @@
                             <a ng-show="isLoggedIn" href="#!/profile">Profile</a>
                         </li>
                         <li>
-                            <a ng-show="isLoggedIn" href="#!/tasks">Activity</a>
+                            <a ng-show="isLoggedIn" href="#!/tasks">Tasks</a>
                         </li>
                         <li>
-                            <a ng-show="isLoggedIn" href="#">Friends</a>
+                            <a ng-show="isLoggedIn" href="#!/myCards">Cards</a>
                         </li>
                         <hr/>
                         <li>

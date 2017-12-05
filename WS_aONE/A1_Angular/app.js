@@ -16,31 +16,42 @@ app.config(function ($routeProvider) {
     //   controller: "testCtrl"
     // })
 
-    // main route
-
+    
     .when("/", {
       // template: '<strong>default page</strong><br/><p>default content here</p>'
-      templateUrl: "views/home.html",
+      templateUrl: "pages/home/home.html",
       controller: "homeCtrl"
     })
+    .when("/login", {
+      // template: '<strong>default page</strong><br/><p>default content here</p>'
+      templateUrl: "pages/home/login.html",
+      //controller: "loginCtrl"
+    })
+    
+    // main route
     .when("/main", {
       // template: '<strong>default page</strong><br/><p>default content here</p>'
-      templateUrl: "views/main.html",
+      templateUrl: "pages/main/main.html",
       controller: "mainCtrl"
     })
     .when("/users", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'
-      templateUrl: "views/users.html",
+      templateUrl: "./admin/users/users.html",
       controller: "usersCtrl"
     })
     .when("/tasks", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'
-      templateUrl: "views/tasks.html",
+      templateUrl: "pages/tasks/tasks.html",
       controller: "tasksCtrl"
+    })
+    .when("/myCards", {
+      // template: '<strong>users page</strong><br/><p>User content here</p>'
+      templateUrl: "pages/cards/myCards.html",
+      controller: "cardsGenCtrl"
     })
     .when("/profile", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'
-      templateUrl: "views/profile.html",
+      templateUrl: "pages/profile/profile.html",
       controller: "profileCtrl"
     })
     .when("/account", {
