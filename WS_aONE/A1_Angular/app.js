@@ -1,4 +1,4 @@
-var app = angular.module('practico', ["ngRoute", "ui.bootstrap"]);
+var app = angular.module('practico', ["ngRoute", "ui.bootstrap", "ngSanitize"]);
 
 app.config(function ($routeProvider) {
 

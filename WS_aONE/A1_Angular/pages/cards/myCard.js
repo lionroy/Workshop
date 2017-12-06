@@ -10,12 +10,12 @@ app.factory("myCard", function () {
     function myCard(author, acronym, text) {
 
         this.cardId = "456z";
-        this.cardAuthor = "Mrs. Mingle";
+        this.cardAuthor = author;
         this.cardTitle = "woke up this morning...";
-        this.cardText = "Bla of the Bla Bla";
+        this.cardText = text;
         this.cardWords = ["Bla", "Bla", "Bla"];
         this.cardTerms = ["Bla"];
-        this.cardAcronym = "BBB";
+        this.cardAcronym = acronym;
         this.cardSign = ".";
         this.cardExtraWords = ["of the", "of", "the"];
     }
