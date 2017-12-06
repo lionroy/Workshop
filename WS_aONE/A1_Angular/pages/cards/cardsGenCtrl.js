@@ -10,26 +10,24 @@ app.controller('cardsGenCtrl', ['$scope', '$rootScope', '$log', '$http', 'myCard
         $scope.newCard = "";
         $scope.newCard.test = "1st tester..";
         // $log.log($scope.newCard.test); // undefined
-        
+
         $scope.newCard = new myCard("author", "acronym", "test text", "'.'");
         $log.log($scope.newCard);
         $log.log($scope.newCard.cardText);
-        
-        app.controller('myCtrl', function($scope) {
-            $scope.names = ["Emil", "Tobias", "Linus"];
-        });
-        $scope.bar = [];
-        bar = function($scope){ ["'@'","'.'","'&nbsp;'","','","'/'","|","|","*","-","~",">","<","=","^","!"]};
+
         // $scope.coin = "";
-        
-        
-        
+
+        $scope.bar = [];
+        $scope.bar.sign = function ($scope) {
+             ["'@'", "'.'", "'&nbsp;'", "','", "'/'", "|", "|", "*", "-", "~", ">", "<", "=", "^", "!"]
+             };
+
         // $log.log($scope.$coin); // ret undefined
-        
+
         // $scope.newCard.test = "2nd tester..";
         //$log.log($scope.newCard.cardText); // returns value from ctor
-        
-        
+
+
         // tst
         //$scope.ctrlWord = $scope.newCard.cardText.substring(0,1);
         //$log.log($scope.$coin); // returns undefined

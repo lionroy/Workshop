@@ -9,15 +9,38 @@
     <div class="myCard col-md-2">
         <!-- <div class="mint"> -->
         <div class="container-fluid">
-            <div class="input-group">
+            <div class="widget">
                 <div class="input-group">
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default">Go!</button>
-                    </span>
-                    <input type="text" class="form-control" ng-model="coin" id="exampleInputAmount" placeholder="coin your term" />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default">Go!</button>
-                    </span>
+                    <div class="input-group">
+
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default">Go!</button>
+                        </span>
+
+                        <input type="text" class="form-control" ng-model="coin" id="exampleInputAmount" placeholder="coin your term" />
+
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default">
+                                    <i class="glyphicon glyphicon-chevron-down"></i>
+
+                            </button>
+                        </span>
+
+
+                        <!-- <span class="input-group-btn">
+                            <select ng-model="selectedName" ng-options="x for x in bar">
+                            </select>
+                        </span> -->
+
+                        <!-- <span class="input-group-btn">
+
+                            <button type="button" class="btn btn-default">
+                                <select ng-model="selectedName" ng-options="b.value for b in sign">
+                                </select>
+                            </button>
+                            
+                        </span> -->
+                    </div>
                 </div>
                 <br/>
             </div>
