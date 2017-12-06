@@ -4,83 +4,68 @@
 <br/>
 
 <div class="row">
-
-
     <div class="myCard col-md-2">
         <!-- <div class="mint"> -->
         <div class="container-fluid">
-            <div class="widget">
-                <div class="input-group">
-                    <div class="input-group">
-
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default">Go!</button>
-                        </span>
-
-                        <input type="text" class="form-control" ng-model="coin" id="exampleInputAmount" placeholder="coin your term" />
-
-                        <span class="input-group-btn">
-                            <button type="button" class="btn btn-default">
-                                    <i class="glyphicon glyphicon-chevron-down"></i>
-
-                            </button>
-                        </span>
-
-
-                        <!-- <span class="input-group-btn">
-                            <select ng-model="selectedName" ng-options="x for x in bar">
-                            </select>
-                        </span> -->
-
-                        <!-- <span class="input-group-btn">
-
-                            <button type="button" class="btn btn-default">
-                                <select ng-model="selectedName" ng-options="b.value for b in sign">
-                                </select>
-                            </button>
-                            
-                        </span> -->
-                    </div>
-                </div>
-                <br/>
+            <!-- <div class="input-group"> -->
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="coin" id="exampleInputAmount" placeholder="coin your term" />
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default">Go!</button>
+                </span>
             </div>
-            <div class="container col-md-2" style="float: right;">
-                <span ng-repeat="item in coin.split(' ')">
-                    <svg width="50" height="50">
-                        <rect width="60" height="60" style="fill:rgb(35,125,190);stroke-width:3;stroke:rgb(0,0,0)" />
-                        <text x=".95em" y="1.6em" font-family="impact" font-size="1.6em" fill="white">
-                            {{item.substring(0,1) + ' ' | uppercase}}</text>
+            <br/>
+        </div>
 
-                        Sorry, your browser does not support inline SVG.
-                    </svg>
-            </div>
-            <h4>
-                <b ng-repeat="item in coin.split(' ')">{{item.substring(0,1)}}</b>
-            </h4>
-            <p class="mint">
-                <span ng-repeat="item in coin.split(' ')">{{item.substring(0,1) + '.' | uppercase}}</span>
-                <!-- {{coin.substring(0,1) | uppercase}} 
-                <span>{{ctrlWord}}</span> -->
-            </p>
-            <h4>
-                {{coin | uppercase}}
-            </h4>
-            <hr>
-
-
-            <span ng-repeat="item in coin.split(' ')">
-                <svg width="90" height="90">
-                    <circle cx="50" cy="50" r="40" stroke="lightgreen" stroke-width="4" fill="black" />
-                    <text x=".95em" y="1.6em" font-family="impact" font-size="3em" fill="white">{{item.substring(0,1) + ' ' | uppercase}}</text>
+        <!-- prob 1 <br/> -->
+        <div class="container col-md-2" style="float: right;">
+            <span ng-repeat="item in coin.split(' ') track by $index">
+                <svg width="50" height="50">
+                    <rect width="60" height="60" style="fill:rgb(35,125,190);stroke-width:3;stroke:rgb(0,0,0)" />
+                    <text x=".95em" y="1.6em" font-family="impact" font-size="1.3em" fill="white">
+                        {{item.substring(0,1) + ' ' | uppercase}}</text>
 
                     Sorry, your browser does not support inline SVG.
                 </svg>
-                <!-- <span class="inset" ng-repeat="item in coin.split(' ')">{{item.substring(0,1) + '.' | uppercase}}</span> -->
             </span>
-            <!-- <img src="./images/img_avatar.png" alt="Avatar" style="width:100%"> -->
         </div>
-        <br/>
-        <!-- </div> -->
 
+        <!-- prob 2 <br/> -->
+            <h4>
+                <b ng-repeat="item in coin.split(' ') track by $index">{{item.substring(0,1)}}</b>
+            </h4>
+
+        <!-- prob 3  <br/> -->
+                <p class="mint">
+                    <span ng-repeat="item in coin.split(' ') track by $index">{{item.substring(0,1) + '.' | uppercase}}</span>
+                </p>
+        <!-- {{coin.substring(0,1) | uppercase}}  -->
+
+        <!-- prob 4 <br/> -->
+                    <h4>
+                        {{coin | uppercase}}
+                    </h4>
+
+        <hr>
+         <!-- prob 5 <br/> -->
+        <span ng-repeat="item in coin.split(' ') track by $index">
+            <svg width="90" height="90">
+                <circle cx="50" cy="50" r="40" stroke="lightgreen" stroke-width="4" fill="black" />
+                <text x=".95em" y="1.6em" font-family="impact" font-size="3em" fill="white">
+                    {{item.substring(0,1) + ' ' | uppercase}}</text>
+
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </span>
+        <!-- <span class="inset" ng-repeat="item in coin.split(' ') track by $index">{{item.substring(0,1) + '.' | uppercase}}</span> -->
+
+        <!-- <img src="./images/img_avatar.png" alt="Avatar" style="width:100%"> -->
     </div>
+    <br/>
+</div>
+</div>
+<br/>
+<!-- </div> -->
+
+</div>
 </div>

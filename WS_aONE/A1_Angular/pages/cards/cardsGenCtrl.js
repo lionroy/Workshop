@@ -17,10 +17,10 @@ app.controller('cardsGenCtrl', ['$scope', '$rootScope', '$log', '$http', 'myCard
 
         // $scope.coin = "";
 
-        $scope.bar = [];
-        $scope.bar.sign = function ($scope) {
-             ["'@'", "'.'", "'&nbsp;'", "','", "'/'", "|", "|", "*", "-", "~", ">", "<", "=", "^", "!"]
-             };
+        // $scope.bar = [];
+        // $scope.bar.sign = function ($scope) {
+        //      ["'@'", "'.'", "'&nbsp;'", "','", "'/'", "|", "|", "*", "-", "~", ">", "<", "=", "^", "!"]
+        //      };
 
         // $log.log($scope.$coin); // ret undefined
 
