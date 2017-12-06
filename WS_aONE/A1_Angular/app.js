@@ -24,7 +24,7 @@ app.config(function ($routeProvider) {
     })
     .when("/login", {
       // template: '<strong>default page</strong><br/><p>default content here</p>'
-      templateUrl: "pages/home/login.html",
+      templateUrl: "pages/home/login.html"
       //controller: "loginCtrl"
     })
     
@@ -33,6 +33,11 @@ app.config(function ($routeProvider) {
       // template: '<strong>default page</strong><br/><p>default content here</p>'
       templateUrl: "pages/main/main.html",
       controller: "mainCtrl"
+    })
+    .when("/home", {
+      // template: '<strong>default page</strong><br/><p>default content here</p>'
+      templateUrl: "pages/home/home.html",
+      controller: "homeCtrl"
     })
     .when("/users", {
       // template: '<strong>users page</strong><br/><p>User content here</p>'

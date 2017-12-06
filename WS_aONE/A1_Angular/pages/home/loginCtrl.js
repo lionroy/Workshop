@@ -20,7 +20,6 @@ app.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $locatio
             } else {
                 $scope.failedAttempt = true;
             }
-    
             //console.log($scope.email + " " + $scope.password)
         }
     

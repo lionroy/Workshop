@@ -54,6 +54,8 @@
     <script src="./services/activeUser.js"></script>
 
 
+    <script src="./pages/cards/directives/prob6Directive.js"></script>
+
     <!-- <script src="./model/friends.js"></script> -->
 
 
@@ -102,7 +104,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li class="active" ng-show="isLoggedIn">
+                <li class="active">
                     <a href="#!/users">Users</a>
                 </li>
                 <li>
@@ -130,10 +132,10 @@
                     <a href="#!/profile">My Profile</a>
                 </li> -->
                 <li>
-                    <a href="#!/login" ng-click="login()">Login</a>
+                    <a href="javascript:void(0)" ng-click="login()">Login</a>
                 </li>
                 <li>
-                    <a href="#!/home" ng-click="logout()">Logout</a>
+                    <a href="#!/home">Logout</a>
                 </li>
 
                 <li class="dropdown">
@@ -142,20 +144,20 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a ng-show="isLoggedIn" href="#!/profile">Profile</a>
+                            <a href="#!/profile">Profile</a>
                         </li>
                         <li>
-                            <a ng-show="isLoggedIn" href="#!/tasks">Tasks</a>
+                            <a href="#!/tasks">Tasks</a>
                         </li>
                         <li>
-                            <a ng-show="isLoggedIn" href="#!/myCards">Cards</a>
+                            <a href="#!/myCards">Cards</a>
                         </li>
                         <hr/>
                         <li>
-                            <a ng-show="isLoggedIn" href="#!/account">Account</a>
+                            <a href="#!/account">Account</a>
                         </li>
                         <li>
-                            <a ng-show="isLoggedIn" href="#">Settings</a>
+                            <a href="#">Settings</a>
                         </li>
                     </ul>
                 </li>
