@@ -8,7 +8,7 @@ app.controller('usersCtrl', ['$scope', '$rootScope', '$log', '$http', 'users',
         }
         else {
             $scope.users = [];
-            $http.get("/Data/userbase.json").then(function mySuccess(response) {
+            $http.get("./Data/userbase.json").then(function mySuccess(response) {
                 users.setUsers(response.data);
                 $scope.users = users.grabAll();
                 //alert("success" + JSON.stringify(response.status));

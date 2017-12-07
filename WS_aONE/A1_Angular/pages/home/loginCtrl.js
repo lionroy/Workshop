@@ -1,6 +1,6 @@
 app.controller("loginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
     
-        $http.get("app/data/users.json").then(function (response) {
+        $http.get("./data/userbase.json").then(function (response) {
             $scope.users = [];
             for (var i = 0; i < response.data.length; i++) {
                 $scope.users.push(new User(response.data[i]));
